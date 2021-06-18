@@ -22,7 +22,7 @@ public class NextGeneration {
                         }
                     }
                 }
-                if(aliveNeighbors !=2) {
+                if(aliveNeighbors !=2 && aliveNeighbors != 3) {
                     nextGen[i][j] = 0;
                 }
                 if(aliveNeighbors == 3) {
