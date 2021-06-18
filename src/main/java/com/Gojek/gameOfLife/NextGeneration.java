@@ -20,7 +20,7 @@ public class NextGeneration {
                         }
                     }
                 }
-                if(aliveNeighbors == 0) {
+                if(aliveNeighbors == 0 || aliveNeighbors == 1) {
                     grid[i][j] = 0;
                 }
             }

@@ -30,4 +30,17 @@ public class NextGenerationTest {
 
         assertArrayEquals(expected, obj.generateNextState(actual));
     }
+
+    @Test
+    public void checkForTwoAliveAndOneAliveNeighbor() {
+        int[][] expected = {
+            {0, 0, 0},
+            {0, 0, 0},
+            {0, 0, 0},
+        };
+        String actual = "./testInputFiles/twoAliveAndOneAliveNeighbor/actual.txt";
+        NextGeneration obj = new NextGeneration();
+
+        assertArrayEquals(expected, obj.generateNextState(actual));
+    }
 }
