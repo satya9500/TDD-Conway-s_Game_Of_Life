@@ -7,6 +7,8 @@ public class NextGeneration {
         int[][] grid = inputObject.readInput(fileName);
         int aliveNeighbors = 0;
         Coordinate coordinateObject = new Coordinate();
+        Grid gridObj = new Grid();
+        int[][] nextGen = gridObj.copyGrid(grid);
 
         for(int i = 0; i < grid.length; i++) {
             for(int j = 0; j < grid[i].length; j++) {
@@ -20,11 +22,14 @@ public class NextGeneration {
                         }
                     }
                 }
-                if(aliveNeighbors == 0 || aliveNeighbors == 1) {
-                    grid[i][j] = 0;
+                if(aliveNeighbors !=2) {
+                    nextGen[i][j] = 0;
+                }
+                if(aliveNeighbors == 3) {
+                    nextGen[i][j] = 1;
                 }
             }
         }
-        return grid;
+        return nextGen;
     }
 }
